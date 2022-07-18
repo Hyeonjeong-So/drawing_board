@@ -2,7 +2,7 @@ class DrawingBoard {
   MODE = "NONE"; //NONE BRUSH ERASER
   IsMouseDown = false; //true false
   eraserColor = "#FFFFFF";
-  backgroundColor = "#ffffff";
+  backgroundColor = "#FFFFFF";
   IsNavigatorVisible = false;
   undoArray = [];
   containerEl;
@@ -22,13 +22,13 @@ class DrawingBoard {
   downloadLinkEl;
 
   constructor() {
-    this.assignElement();
+    this.assingElement();
     this.initContext();
     this.initCanvasBackgroundColor();
     this.addEvent();
   }
 
-  assignElement() {
+  assingElement() {
     this.containerEl = document.getElementById("container");
     this.canvasEl = this.containerEl.querySelector("#canvas");
     this.toolbarEl = this.containerEl.querySelector("#toolbar");
@@ -80,7 +80,7 @@ class DrawingBoard {
 
   onClickDownload() {
     this.downloadLinkEl.href = this.canvasEl.toDataURL("image/jpeg", 1);
-    this.downloadLinkEl.download = "example.jpeg";
+    this.downloadLinkEl.download = "exmaple.jpeg";
   }
 
   onClickClear() {
@@ -167,10 +167,10 @@ class DrawingBoard {
     this.context.lineCap = "round";
     if (this.MODE === "BRUSH") {
       this.context.strokeStyle = this.colorPickerEl.value;
-      this.context.LineWidth = this.brushSliderEl.value;
+      this.context.lineWidth = this.brushSliderEl.value;
     } else if (this.MODE === "ERASER") {
       this.context.strokeStyle = this.eraserColor;
-      this.context.LineWidth = 50;
+      this.context.lineWidth = 50;
     }
     this.saveState();
   }

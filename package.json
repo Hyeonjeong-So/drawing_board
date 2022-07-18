@@ -1,7 +1,6 @@
 {
   "name": "drawing-board",
   "version": "1.0.0",
-  "description": "",
   "source": "index.html",
   "scripts": {
     "start": "parcel",
@@ -20,5 +19,15 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.1.1"
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hyeonjeong-So/drawing_board.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hyeonjeong-So/drawing_board/issues"
+  },
+  "homepage": "https://github.com/Hyeonjeong-So/drawing_board#readme",
+  "description": ""
 }
